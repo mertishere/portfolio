@@ -1,6 +1,6 @@
 Hi,
 
-my name is XerWo, a guy who likes to create and build stuff, whilst banging his head on his keyboard because of an error 
+my name is Mert, a guy who likes to create and build stuff, whilst banging his head on his keyboard because of an error 
 that could've been fixed with a simple semi-colon.
 
 Probably sounds familiar to a lot of software developers, but that is basically what I do. Creating random CLIs, building
@@ -18,4 +18,4 @@ going to an online course where I learned a bunch of new stuff, about how to thi
 
 Due to the fact, that the course kinda was underwhelming, I quit it, and focused on improving myself on my own.
 
-Which is where I am right now. 17 year old, and still nothing (kinda).
+Which is where I am right now. 19 year old, and still nothing (kinda).
