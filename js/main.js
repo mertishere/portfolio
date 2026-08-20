@@ -107,7 +107,7 @@ apps.forEach(app => {
 
         // get the notes for the app name
         const get_notes = await get_notes_lines(`../assets/notes/${app_name}.txt`)
-        tab_text.innerHTML = get_notes
+        tab_text.innerHTML = get_notes.replaceAll("\n", "<br>")
 
         // if the notes were not empty,
         // add them.
@@ -119,8 +119,11 @@ apps.forEach(app => {
             tab_text.innerHTML += `<a href="https://myfonttyper.com">
                 <img src="../assets/myfonttyper.png" /> myFonttyper (a website for students)
                 </a><br>`
-            tab_text.innerHTML += `<a href="https://cavorok.com">
-            <img src="../assets/cavorok.png" /> Cavorok (a website for property-management)
+            tab_text.innerHTML += `<a href="https://cherries.works">
+            <img src="../assets/cherries.png" /> cherries.works (a website for low-level)
+                </a><br>`
+            tab_text.innerHTML += `<a href="https://zep.run">
+            <img src="../assets/zep.png" /> zeP (a package manager for Zig)
                 </a><br>`
         } else if(app_name == "trash") {
             // javascript trash section
@@ -177,7 +180,6 @@ apps.forEach(app => {
         // focus on the newly created tab
         document.querySelector(".tabs[focused]")?.removeAttribute("focused")
         new_tab.setAttribute("focused", true)
-
 
         new_tab.appendChild(text_wrapper)
         document.body.appendChild(new_tab)

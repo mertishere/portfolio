@@ -1,20 +1,14 @@
 Hi,
 
-my name is Mert, a guy who likes to create and build stuff, whilst banging his head on his keyboard because of an error 
-that could've been fixed with a simple semi-colon.
+my name is Mert, a guy who likes to create and build stuff, whilst banging his head on his keyboard because of an error that could've been fixed with a simple semi-colon.
 
-Probably sounds familiar to a lot of software developers, but that is basically what I do. Creating random CLIs, building
-stuff from scratch, or coding fullstack web apps, that will probably never see the day of light, just because of boredom.
+Probably sounds familiar to a lot of software developers, but that is basically what I do. Creating random CLIs, building stuff from scratch, or coding fullstack web apps, that will probably never see the day of light, just because of boredom.
+
 I do that, on simple programming languages such as Python, JavaScript and Zig.
 
-Programming is a big part of my life, kinda something I do when I have nothing else to do. If the refrigerator is still empty
-after opening it for the 6th time, I just head to VSCode and do whatever. Been doing that since I was 13, and well, I will
-probably be doing it till the end of time.
- 
-Started programming at the age of 13 (as already mentioned), but with fairly dull discord bot scripts, and CTRL+C CTRL+V 
-as my favourite keyboard shortcuts. It is true, that it is not good practice to copy everything without learning, but I 
-really had no idea about anything back then, I was just doing what I thought was right. Finally after months of coding, I started
-going to an online course where I learned a bunch of new stuff, about how to think like a coder.
+Programming is a big part of my life, kinda something I do when I have nothing else to do. If the refrigerator is still empty after opening it for the 6th time, I just head to VSCode and do whatever. Been doing that since I was 13, and well, I will probably be doing it till the end of time.
+
+Started programming at the age of 13 (as already mentioned), but with fairly dull discord bot scripts, and CTRL+C CTRL+V as my favourite keyboard shortcuts. It is true, that it is not good practice to copy everything without learning, but I really had no idea about anything back then, I was just doing what I thought was right. Finally after months of coding, I started going to an online course where I learned a bunch of new stuff, about how to think like a coder.
 
 Due to the fact, that the course kinda was underwhelming, I quit it, and focused on improving myself on my own.
 
