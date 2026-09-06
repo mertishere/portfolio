@@ -1,0 +1,12 @@
+As mentioned in the About app, I have been coding for more than half a decade.
+
+> Learned coding websites, using raw HTML, JS, CSS, and NodeJS.
+> Fiddled around, programmed my own App with Flutter.
+> Jumped into low-level programming 
+> Programmed my own PNG Decompressor + NN with Zig.
+> Fell down too deep
+> Build my note taker with Assembly.
+> Found my way back up and learned C 
+> Build my GitHub Organization, cherries.works.
+
+Currently, I am programming with C and GoLang, and am solely focused on Open-Source development and collaboration. I want to make the world a better place with my code, I want people to use my programs without any hassles. Might sound corny, but I believe that good things, not only come to those who wait, but also to those who do good things.
