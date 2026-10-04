@@ -1,4 +1,4 @@
-.newspaper_personal {
+.newspaper_container {
     position: relative;
     display: flex;
     flex-direction: row;
@@ -8,7 +8,54 @@
     height: fit-content;
 }
 
-.newspaper_history {
+.newspaper_wrapper {
+    position: absolute;
+    width: calc(100% - 4rem);
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin: 2rem;
+    margin-top: 1rem;
+}
+
+.newspaper_wrapper h1 {
+    position: relative;
+    font-family: Cormorant Garamond;
+    padding: 1rem;
+    border: 1px solid black;
+    font-size: 3rem;
+    border-top: 3px double black;
+    background-color: var(--surface);
+}
+
+.newspaper_wrapper .newspaper_description {
+    font-size: 1.6rem;
+}
+
+.newspaper_wrapper p {
+    position: absolute;
+    font-size: 1.4rem;
+    font-family: Cormorant Garamond;
+    right: 0;
+    padding: 1rem;
+    border: 1px solid black;
+    font-weight: bold;
+    background-color: var(--surface);
+}
+
+.newspaper_wrapper h1::after {
+    content: "";
+    position: absolute;
+    bottom: -1rem;
+    padding: 1rem;
+    width: 5rem;
+    height: 2rem;
+    border: 1px solid black;
+}
+
+.newspaper_cards {
     position: relative;
     display: flex;
     border: 1px solid black;
@@ -16,16 +63,14 @@
     background-color: var(--surface);
     box-shadow: 5px 5px 0 var(--olive);
     flex-direction: column;
-    width: fit-content;
-    min-height: 25rem;
-    height: fit-content;
-    width: max-content;
+    width: 90%;
+    height: 100%;
     padding-top: 0.75rem;
     font-family: "Cormorant Garamond", serif;
     color: var(--text);
 }
 
-.newspaper_history .title {
+.newspaper_cards .title {
     position: relative;
     display: block;
     height: 1rem !important;
@@ -38,7 +83,7 @@
     text-transform: uppercase;
 }
 
-.newspaper_history p {
+.newspaper_cards p {
     position: relative;
     margin: 0;
     height: fit-content;
@@ -49,18 +94,18 @@
     border-top: 1px solid var(--border);
 }
 
-.newspaper_history p::first-line {
+.newspaper_cards p::first-line {
     font-family: "IBM Plex Sans", sans-serif;
     font-size: 1.0rem;
     font-weight: 700;
     letter-spacing: 0.08em;
 }
 
-.newspaper_history p + p {
+.newspaper_cards p + p {
     padding-top: 1rem;
 }
 
-.newspaper_history p br + * {
+.newspaper_cards p br + * {
     color: var(--muted);
 }
 
@@ -80,12 +125,14 @@
         margin: 5px;
     }
 
-    .newspaper_personal {
+    .newspaper_container {
         flex-direction: column;
         margin: 0 !important;
+        padding: 1rem;
+        box-sizing: border-box;
     }
 
-    .newspaper_personal > div p {
+    .newspaper_container > div p {
         height: auto !important;
     }
 
@@ -97,7 +144,7 @@
         display: none;
     }
 
-    .newspaper_history {
+    .newspaper_cards {
         width: auto;
     }
 }
