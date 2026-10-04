@@ -1,0 +1,131 @@
+footer {
+    position: relative;
+    width: calc(100% - 2rem);
+    margin: 2rem auto 2rem;
+    padding: 2rem;
+    box-sizing: border-box;
+    color: var(--text);
+    font-family: "Cormorant Garamond", serif;
+    background-color: var(--surface);
+    border: 1px solid black;
+    border-top: 3px double var(--text);
+}
+
+.footer_header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--text);
+}
+
+.footer_header h2 {
+    margin: 0;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.footer_header span {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 0.65rem;
+    font-weight: bold;
+}
+
+.footer_content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.footer_column {
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem;
+    border-left: 1px solid var(--border);
+}
+
+.footer_column:first-child {
+    padding-left: 0;
+    border-left: none;
+}
+
+.footer_column h3 {
+    margin: 0 0 0.75rem;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 0.65rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.footer_column p {
+    margin: 0;
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
+
+.footer_column a {
+    width: fit-content;
+    margin: 0.15rem 0;
+    color: var(--text);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: 
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.footer_column a:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+}
+
+.footer_bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: var(--muted);
+}
+
+@media (max-width: 700px) {
+    footer {
+        width: calc(100% - 2rem);
+        margin-top: 5rem;
+    }
+
+    .footer_header {
+        flex-direction: column;
+        gap: 0.4rem;
+    }
+
+    .footer_header h2 {
+        font-size: 1.6rem;
+    }
+
+    .footer_content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .footer_column {
+        padding: 1rem 0;
+        border-left: none;
+        border-top: 1px solid var(--border);
+    }
+
+    .footer_column:first-child {
+        padding-top: 0;
+        border-top: none;
+    }
+
+    .footer_bottom {
+        flex-direction: column;
+        gap: 0.4rem;
+    }
+}

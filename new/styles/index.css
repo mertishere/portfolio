@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+:root {
+    --bg: #E8DFCC;
+    --surface: #F1E9D8;
+
+    --text: #29251F;
+    --muted: #6B6255;
+
+    --border: #A99D87;
+
+    --accent: #713B3B;
+    --accent-hover: #552C2C;
+
+    --olive: #62664A;
+}
+
+body {
+    position: relative;
+    background: linear-gradient(0deg, var(--border), var(--bg));
+    background-color: var(--bg);
+}
+
+a {
+    color: var(--olive);
+    font-weight: bolder;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: calc(100dvh - 1rem);
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--text);
+    width: 100%;
+    height: 100%;
+    background-color: #00000023;
+    border-top: 3px double black;
+}
+
+.newspaper_wrapper {
+    position: absolute;
+    width: calc(100% - 4rem);
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin: 2rem;
+    margin-top: 1rem;
+}
+
+.newspaper_wrapper h1 {
+    position: relative;
+    font-family: Cormorant Garamond;
+    padding: 1rem;
+    border: 1px solid black;
+    border-top: 3px double black;
+    background-color: var(--surface);
+}
+
+.newspaper_wrapper p {
+    position: absolute;
+    font-family: Cormorant Garamond;
+    right: 0;
+    padding: 1rem;
+    border: 1px solid black;
+    font-weight: bold;
+    background-color: var(--surface);
+}
+
+.newspaper_wrapper h1::after {
+    content: "";
+    position: absolute;
+    bottom: -1rem;
+    padding: 1rem;
+    width: 5rem;
+    height: 2rem;
+    border: 1px solid black;
+}
+
+.floating_description_1 {
+    position: absolute;
+    width: 200px;
+    left: 10rem;
+    bottom: 10rem;
+    font-size: 1.2rem;
+    font-family: Cormorant Garamond;
+    border: 1px solid var(--text);
+    padding: 1rem;
+}
+
+.floating_description_1::before {
+    position: absolute;
+    content: "";
+    background-color: var(--border);
+    padding: 1rem;
+    width: 9rem;
+    top: 1.3rem;
+    left: -3rem;
+    z-index: -1;
+}
+
+.floating_description_1::after {
+    position: absolute;
+    content: "";
+    background-color: var(--olive);
+    padding: 1rem;
+    width: 6rem;
+    height: 3rem;
+    bottom: -4rem;
+    right: -3rem;
+    z-index: -1;
+}
+
+.floating_description_2 {
+    position: absolute;
+    width: 250px;
+    right: 8rem;
+    top: 9rem;
+    font-size: 1.2rem;
+    color: var(--text);
+    font-family: Cormorant Garamond;
+    border: 1px solid var(--muted);
+    padding: 1rem;
+}
+
+.floating_description_2::before {
+    position: absolute;
+    content: "";
+    background-color: var(--surface);
+    padding: 1rem;
+    width: 13rem;
+    bottom: 1.3rem;
+    right: 3rem;
+    z-index: -1;
+}
+
+.floating_description_2::after {
+    position: absolute;
+    content: "";
+    background-color: var(--border);
+    padding: 1rem;
+    width: 3rem;
+    top: 1.3rem;
+    right: -2rem;
+    z-index: -1;
+}
+
+.floating_description_3 {
+    position: absolute;
+    width: 250px;
+    left: 4rem;
+    bottom: 70%;
+    font-size: 1.2rem;
+    color: var(--bg);
+    font-family: Cormorant Garamond;
+}
+
+.floating_description_3::before {
+    position: absolute;
+    content: "";
+    background-color: var(--accent-hover);
+    padding: 2rem;
+    width: 5rem;
+    bottom: 0;
+    left: -2rem;
+    z-index: -1;
+}
+
+.floating_description_4 {
+    position: absolute;
+    width: 300px;
+    right: 4rem;
+    bottom: 10%;
+    font-size: 1.2rem;
+    color: var(--text);
+    font-family: Cormorant Garamond;
+}
+
+.floating_description_4::before {
+    position: absolute;
+    content: "";
+    background-color: var(--surface);
+    padding: 2rem;
+    width: 5rem;
+    bottom: 0;
+    left: -2rem;
+    z-index: -1;
+}
+
+.floating_description_4::after {
+    position: absolute;
+    content: "";
+    background-color: var(--accent);
+    padding: 2rem;
+    width: 1rem;
+    top: 0;
+    right: 4rem;
+    z-index: -1;
+}
+
+.image_wrapper {
+    position: relative;
+    height: min-content;
+    width: min-content;
+}
+
+.image_wrapper img {
+    width: 300px;
+    border: 1px solid black;
+    transform: skew(-2deg);
+    box-shadow: 5px 5px 0 var(--olive);
+}
+
+.image_wrapper .taken {
+    position: absolute;
+    bottom: -3rem;
+    color: var(--text);
+}
+
+.image_wrapper .name {
+    position: absolute;
+    bottom: -2rem;
+    right: -2rem;
+    background-color: var(--border);
+    transform: skew(-2deg);
+    padding: 5px;
+    border: 1px solid black;
+}
+
+.image_wrapper .age {
+    position: absolute;
+    top: -2rem;
+    left: -1rem;
+    background-color: var(--border);
+    transform: skew(-2deg);
+    padding: 5px;
+    border: 1px solid black;
+}
+
+.pages {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+    width: calc(100% - 2rem);
+}
+
+.pages > div {
+    position: relative;
+    border: 1px solid black;
+    background-color: #00000023;
+    width: 100%;
+    aspect-ratio: 2/1;
+    border-top: 3px double black;
+}
+
+.pages > div > .newspaper_wrapper {
+    position: relative;
+}
+
+.pages > div > .newspaper_data {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 2rem;
+}
+
+.pages > div > .newspaper_data > p {
+    margin: 5px;
+}
+
+.pages > div .newspaper_me_wrapper {
+    position: relative;
+    width: 30%;
+}
+
+.pages > div .newspaper_me {
+    position: absolute;
+    display: block;
+    right: 0;
+    width: 90%;
+    border: 1px solid black;
+    transform: skew(-2deg);
+    box-shadow: 5px 5px 0 var(--olive);
+}
+
+.pages > div .newspaper_me_date {
+    position: absolute;
+    display: block;
+    right: 2rem;
+    bottom: 25%;
+    width: 60%;
+    font-size: 1rem;
+}
+
+.pages > div .newspaper_me_info {
+    position: absolute;
+    display: block;
+    right: 2rem;
+    bottom: 20%;
+    width: 60%;
+    font-size: 1rem;
+}
+
+.bottom_description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: .7rem;
+    margin: 1rem;
+}
+
+
+@media (max-width: 600px) {
+    .floating_description_1,
+    .floating_description_2,
+    .floating_description_3,
+    .floating_description_4,
+    .bottom_description {
+        display: none;
+    }
+
+    .image_wrapper img {
+        width: 200px;
+    }
+
+    .floating_description_4 {
+        display: block;
+        right: 0;
+        left: 0;
+    }
+}
