@@ -22,15 +22,16 @@ footer {
 .footer_header h2 {
     margin: 0;
     font-family: "Cormorant Garamond", serif;
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: bold;
     letter-spacing: 2px;
 }
 
 .footer_header span {
     font-family: "IBM Plex Sans", sans-serif;
-    font-size: 0.65rem;
+    font-size: 0.9rem;
     font-weight: bold;
+    letter-spacing: 2px;    
 }
 
 .footer_content {
@@ -55,20 +56,21 @@ footer {
 .footer_column h3 {
     margin: 0 0 0.75rem;
     font-family: "IBM Plex Sans", sans-serif;
-    font-size: 0.65rem;
+    font-size: 1.3rem;
     font-weight: bold;
     letter-spacing: 2px;
 }
 
 .footer_column p {
     margin: 0;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     line-height: 1.4;
 }
 
 .footer_column a {
     width: fit-content;
     margin: 0.15rem 0;
+    font-size: 1.2rem;
     color: var(--text);
     text-decoration: none;
     border-bottom: 1px solid transparent;
@@ -87,7 +89,7 @@ footer {
     justify-content: space-between;
     padding: 0.75rem 0;
     font-family: "IBM Plex Sans", sans-serif;
-    font-size: 0.6rem;
+    font-size: 0.8rem;
     font-weight: 600;
     letter-spacing: 2px;
     color: var(--muted);
