@@ -3,33 +3,45 @@
 :root {
     --bg: #E8DFCC;
     --surface: #F1E9D8;
-
     --text: #29251F;
     --muted: #6B6255;
-
     --border: #A99D87;
-
     --accent: #713B3B;
     --accent-hover: #552C2C;
-
     --olive: #62664A;
 }
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 body {
-    position: relative;
-    background: linear-gradient(0deg, var(--border), var(--bg));
+    margin: 0;
+
+    background:
+        linear-gradient(
+            0deg,
+            var(--border),
+            var(--bg)
+        );
+
     background-color: var(--bg);
+
+    color: var(--text);
 }
 
 a {
     color: var(--olive);
-    font-weight: bolder;
+    font-weight: 700;
 }
+
 
 .hero {
     position: relative;
     width: 100%;
-    height: calc(100dvh - 1rem);
+    min-height: 100svh;
     padding: 1rem;
     box-sizing: border-box;
 }
@@ -37,14 +49,12 @@ a {
 .main {
     position: relative;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 1px solid var(--text);
     width: 100%;
-    height: 100%;
+    min-height: calc(100svh - 2rem);
+    border: 1px solid var(--text);
     border-top: 3px double black;
-
     background:
         repeating-linear-gradient(
             to bottom,
@@ -54,196 +64,387 @@ a {
             #00000023 101px
         ),
         #00000023;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
 }
 
-.floating_description_1 {
+
+/* =========================================================
+   FLOATING DESCRIPTIONS
+   ========================================================= */
+
+.floating_description_1,
+.floating_description_2,
+.floating_description_3,
+.floating_description_4 {
     position: absolute;
-    width: 250px;
-    left: 10rem;
-    bottom: 10rem;
-    font-size: 1.5rem;
-    font-family: Cormorant Garamond;
-    border: 1px solid var(--text);
-    padding: 1rem;
+
+    font-family: "Cormorant Garamond", serif;
+
+    line-height: 1.25;
 }
+
+
+/* Top / left */
+.floating_description_1 {
+    width: min(250px, 20vw);
+
+    left: clamp(2rem, 10vw, 10rem);
+    bottom: clamp(4rem, 10vw, 10rem);
+
+    padding: 1rem;
+
+    border: 1px solid var(--text);
+
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+}
+
+
+/* Top / right */
+.floating_description_2 {
+    width: min(300px, 24vw);
+
+    right: clamp(2rem, 6vw, 6rem);
+    top: clamp(5rem, 9vw, 9rem);
+
+    padding: 1rem;
+
+    border: 1px solid var(--muted);
+
+    color: var(--text);
+
+    font-size: clamp(1rem, 1.4vw, 1.4rem);
+}
+
+
+/* Middle / left */
+.floating_description_3 {
+    width: min(275px, 22vw);
+
+    left: clamp(2rem, 4vw, 4rem);
+    bottom: 70%;
+
+    color: var(--bg);
+
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+}
+
+
+/* Bottom / right */
+.floating_description_4 {
+    width: min(300px, 24vw);
+
+    right: clamp(2rem, 4vw, 4rem);
+    bottom: 10%;
+
+    color: var(--text);
+
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+}
+
+
+/* =========================================================
+   FLOATING DECORATION
+   ========================================================= */
 
 .floating_description_1::before {
-    position: absolute;
     content: "";
-    background-color: var(--border);
-    padding: 1rem;
+
+    position: absolute;
+
     width: 9rem;
+    height: 2rem;
+
     top: 1.3rem;
     left: -3rem;
+
+    background-color: var(--border);
+
     z-index: -1;
 }
 
 .floating_description_1::after {
-    position: absolute;
     content: "";
-    background-color: var(--olive);
-    padding: 1rem;
+
+    position: absolute;
+
     width: 6rem;
     height: 3rem;
-    bottom: -4rem;
+
     right: -3rem;
+    bottom: -4rem;
+
+    background-color: var(--olive);
+
     z-index: -1;
 }
 
-.floating_description_2 {
-    position: absolute;
-    width: 300px;
-    right: 6rem;
-    top: 9rem;
-    font-size: 1.4rem;
-    color: var(--text);
-    font-family: Cormorant Garamond;
-    border: 1px solid var(--muted);
-    padding: 1rem;
-}
 
 .floating_description_2::before {
-    position: absolute;
     content: "";
-    background-color: var(--surface);
-    padding: 1rem;
+
+    position: absolute;
+
     width: 13rem;
-    bottom: 1.3rem;
+    height: 2rem;
+
     right: 3rem;
+    bottom: 1.3rem;
+
+    background-color: var(--surface);
+
     z-index: -1;
 }
 
 .floating_description_2::after {
-    position: absolute;
     content: "";
-    background-color: var(--border);
-    padding: 1rem;
+
+    position: absolute;
+
     width: 3rem;
+    height: 2rem;
+
     top: 1.3rem;
     right: -2rem;
+
+    background-color: var(--border);
+
     z-index: -1;
 }
 
-.floating_description_3 {
-    position: absolute;
-    width: 275px;
-    left: 4rem;
-    bottom: 70%;
-    font-size: 1.5rem;
-    color: var(--bg);
-    font-family: Cormorant Garamond;
-}
 
 .floating_description_3::before {
-    position: absolute;
     content: "";
-    background-color: var(--accent-hover);
-    padding: 3rem;
-    width: 5rem;
-    bottom: 0;
-    font-size: 1.5rem;
+
+    position: absolute;
+
+    width: 13rem;
+    height: 6rem;
+
     left: -2rem;
+    bottom: 0;
+
+    background-color: var(--accent-hover);
+
     z-index: -1;
 }
 
-.floating_description_4 {
-    position: absolute;
-    width: 300px;
-    right: 4rem;
-    bottom: 10%;
-    font-size: 1.5rem;
-    color: var(--text);
-    font-family: Cormorant Garamond;
-}
 
 .floating_description_4::before {
-    position: absolute;
     content: "";
-    background-color: var(--surface);
-    padding: 2rem;
+
+    position: absolute;
+
     width: 5rem;
-    bottom: 0;
+    height: 4rem;
+
     left: -2rem;
+    bottom: 0;
+
+    background-color: var(--surface);
+
     z-index: -1;
 }
 
 .floating_description_4::after {
-    position: absolute;
     content: "";
-    background-color: var(--accent);
-    padding: 2rem;
-    width: 1rem;
+
+    position: absolute;
+
+    width: 4rem;
+    height: 6rem;
+
     top: 0;
     right: 4rem;
+
+    background-color: var(--accent);
+
     z-index: -1;
 }
 
+
+/* =========================================================
+   IMAGE
+   ========================================================= */
+
 .image_wrapper {
     position: relative;
-    height: min-content;
-    width: min-content;
+
+    width: min(500px, 45vw);
+
+    flex-shrink: 0;
 }
 
 .image_wrapper img {
-    width: 500px;
+    display: block;
+
+    width: 100%;
+    height: auto;
+
     border: 1px solid black;
+
     transform: skew(-2deg);
+
     box-shadow: 5px 5px 0 var(--olive);
 }
 
 .image_wrapper .taken {
     position: absolute;
+
     bottom: -3rem;
+    left: 0;
+
     color: var(--text);
+
+    font-size: clamp(0.75rem, 1vw, 1rem);
 }
 
 .image_wrapper .name {
     position: absolute;
-    bottom: -2rem;
+
     right: -2rem;
-    background-color: var(--border);
-    transform: skew(-2deg);
+    bottom: -2rem;
+
     padding: 5px;
-    font-size: 1.5rem;
+
     border: 1px solid black;
+
+    background-color: var(--border);
+
+    transform: skew(-2deg);
+
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
 }
 
 .image_wrapper .age {
     position: absolute;
+
     top: -2rem;
     left: -1rem;
-    background-color: var(--border);
-    transform: skew(-2deg);
+
     padding: 5px;
-    font-size: 1.5rem;
+
     border: 1px solid black;
+
+    background-color: var(--border);
+
+    transform: skew(-2deg);
+
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
 }
+
+
+/* =========================================================
+   FOOTER DESCRIPTION
+   ========================================================= */
 
 .bottom_description {
     position: absolute;
+
     bottom: 0;
     left: 0;
-    font-size: .7rem;
+
     margin: 1rem;
+
+    font-size: 0.7rem;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+    .floating_description_1 {
+        left: 2rem;
+    }
+
+    .floating_description_2 {
+        right: 2rem;
+    }
+
+    .floating_description_3 {
+        left: 2rem;
+    }
+
+    .floating_description_4 {
+        right: 2rem;
+    }
+
+    .image_wrapper {
+        width: min(500px, 70vw);
+    }
 }
 
 
 @media (max-width: 600px) {
+    .hero {
+        min-height: fit-content;
+        padding: 0.5rem;
+    }
+
+    .main {
+        min-height: 70svh;
+        height: 70svh;
+    }
+
     .floating_description_1,
     .floating_description_2,
     .floating_description_3,
-    .floating_description_4,
     .bottom_description {
         display: none;
     }
 
-    .image_wrapper img {
-        width: 200px;
-    }
-
+    /* Keep #4 as your mobile floating caption */
     .floating_description_4 {
         display: block;
-        right: 0;
-        left: 0;
+
+        width: auto;
+
+        left: 1rem;
+        right: 1rem;
+
+        bottom: 1.5rem;
+
+        font-size: 3rem;
+    }
+
+    .image_wrapper {
+        width: min(70vw, 300px);
+    }
+
+    .image_wrapper .taken {
+        bottom: -2rem;
+    }
+
+    .image_wrapper .name {
+        right: -1rem;
+        bottom: -1.5rem;
+
+        font-size: 1rem;
+    }
+
+    .image_wrapper .age {
+        top: -1.5rem;
+        left: -0.5rem;
+
+        font-size: 1rem;
+    }
+}
+
+
+/* Very small phones */
+@media (max-width: 380px) {
+
+    .image_wrapper {
+        width: 65vw;
+    }
+
+    .image_wrapper .name,
+    .image_wrapper .age {
+        font-size: 0.85rem;
     }
 }
