@@ -364,6 +364,7 @@ a {
     transform: skew(-2deg);
 
     font-size: clamp(1rem, 1.5vw, 1.5rem);
+    z-index: 1;
 }
 
 .image_wrapper .age {
@@ -381,6 +382,7 @@ a {
     transform: skew(-2deg);
 
     font-size: clamp(1rem, 1.5vw, 1.5rem);
+    z-index: 1;
 }
 
 
