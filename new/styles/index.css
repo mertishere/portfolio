@@ -79,7 +79,8 @@ a {
 .floating_description_1,
 .floating_description_2,
 .floating_description_3,
-.floating_description_4 {
+.floating_description_4,
+.floating_description_5 {
     position: absolute;
 
     font-family: "Cormorant Garamond", serif;
@@ -143,6 +144,23 @@ a {
     color: var(--text);
 
     font-size: clamp(1rem, 1.5vw, 1.5rem);
+}
+
+
+/* Middle / right */
+.floating_description_5 {
+    width: min(300px, 24vw);
+    height: fit-content;
+    padding: 1rem;
+
+    right: 15vw;
+    bottom: 50%;
+    top: 40%;
+
+    color: var(--text);
+
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    border: 1px solid var(--accent);
 }
 
 
@@ -265,6 +283,38 @@ a {
     z-index: -1;
 }
 
+.floating_description_5::before {
+    content: "";
+
+    position: absolute;
+
+    width: 5rem;
+    height: 110%;
+
+    top: -2rem;
+    left: -2rem;
+
+    background-color: var(--surface);
+
+    z-index: -1;
+}
+
+.floating_description_5::after {
+    content: "";
+
+    position: absolute;
+
+    width: 10rem;
+    height: 2rem;
+
+    top: -1rem;
+    right: 2rem;
+
+    background-color: var(--accent);
+
+    z-index: -1;
+}
+
 
 .image_wrapper {
     position: relative;
@@ -272,6 +322,7 @@ a {
     width: min(500px, 45vw);
 
     flex-shrink: 0;
+    z-index: -1;
 }
 
 .image_wrapper img {
@@ -360,6 +411,10 @@ a {
 
     .floating_description_4 {
         right: 2rem;
+    }
+
+    .floating_description_5 {
+        display: none;
     }
 
     .image_wrapper {
