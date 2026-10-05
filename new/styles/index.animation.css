@@ -102,6 +102,10 @@
     animation: appear 0.5s ease-in-out 1.55s both;
 }
 
+.floating_description_5 {
+    animation: appear 0.7s ease-in-out 1.7s both;
+}
+
 .floating_description_1::before {
     animation: growHorizontal 0.5s ease-in-out 1.2s both;
 }
